@@ -88,88 +88,88 @@ insert into AutoEstrada.Troço(ID,Nome,Estrada_ID,NumFaixas,Extensao,NumAreasServ
 
 --insert Ocorrencia
 --A1
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-01 00:00:00','Concluído','Madalena','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.12','2021-05-01 06:00:00','Concluído','Ponte da Arrábida','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.7','2021-05-01 11:30:00','Concluído','Mealhada','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.2','2021-05-01 14:00:00','Concluído','Vila Franca de Xira','Meteorologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.7','2021-05-01 23:30:00','Concluído','Mealhada','Colisão Rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-05 01:30:00','Concluído','Coimbrões','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.9','2021-05-05 07:30:00','Concluído','Santa Maria da Feira','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.7','2021-05-05 12:00:00','Concluído','Mealhada','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-05 17:00:00','Concluído','Valadares','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.12','2021-05-05 18:30:00','Concluído','Ponte da Arrábida','Metereologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-10 02:00:00','Concluído','Valadares','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-10 08:00:00','Concluído','Madalena','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-10 21:00:00','Concluído','Valadares','Meteorologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-15 09:00:00','Concluído','Valadares','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-15 22:00:00','Concluído','Madalena','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-20 10:30:00','Concluído','Madalena','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.2','2021-05-20 13:00:00','Concluído','Vila Franca de Xira','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.2','2021-05-20 21:00:00','Concluído','Vila Franca de Xira','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.7','2021-05-25 12:00:00','Concluído','Mealhada','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.2','2021-05-25 14:30:00','Concluído','Vila Franca de Xira','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-25 16:30:00','Concluído','Coimbrões','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-30 15:00:00','Concluído','Madalena','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.9','2021-05-30 19:30:00','Concluído','Santa Maria da Feira','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('1.10','2021-05-30 20:30:00','Concluído','Madalena','Colisão rodoviária');
---A2
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.2','2021-05-01 17:00:00','Concluído','Almada','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.11','2021-05-01 18:30:00','Concluído','Castro Verde','Metereologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.5','2021-05-01 19:30:00','Concluído','Setúbal','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.5','2021-05-05 07:30:00','Concluído','Setúbal','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.5','2021-05-05 12:00:00','Concluído','Setúbal','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.2','2021-05-10 00:00:00','Concluído','Almada','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.11','2021-05-10 12:00:00','Concluído','Castro Verde','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.11','2021-05-20 01:30:00','Concluído','Castro Verde','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.2','2021-05-20 06:00:00','Concluído','Almada','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.11','2021-05-20 10:30:00','Concluído','Castro Verde','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.5','2021-05-20 22:00:00','Concluído','Setúbal','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.2','2021-05-25 11:30:00','Concluído','Almada','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('2.11','2021-05-25 14:00:00','Concluído','Castro Verde','Meteorologia adversa');
---A3
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.6','2021-05-05 10:30:00','Concluído','Ponte de Lima','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.2','2021-05-05 13:00:00','Concluído','Águas Santas','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.4','2021-05-20 14:30:00','Concluído','Braga','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.6','2021-05-20 15:00:00','Concluído','Ponte de Lima','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.2','2021-05-25 16:30:00','Concluído','Águas Santas','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.2','2021-05-25 18:30:00','Concluído','Águas Santas','Metereologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.4','2021-05-30 19:30:00','Concluído','Braga','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.2','2021-05-30 20:30:00','Concluído','Águas Santas','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('3.6','2021-05-30 21:00:00','Concluído','Ponte de Lima','Meteorologia adversa');
---A4
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.5','2021-05-01 20:30:00','Concluído','Amarante','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.4','2021-05-05 19:30:00','Concluído','Penafiel','Meteorologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.4','2021-05-25 09:00:00','Concluído','Penafiel','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.5','2021-05-25 16:30:00','Concluído','Amarante','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.5','2021-05-15 17:00:00','Concluído','Amarante','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('4.4','2021-05-30 08:00:00','Concluído','Penafiel','Incêndio');
---A5
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('5.1','2021-05-10 06:00:00','Concluído','Lisboa','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('5.1','2021-05-15 07:30:00','Concluído','Lisboa','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('5.1','2021-05-20 08:00:00','Concluído','Lisboa','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('5.2','2021-05-25 22:00:00','Concluído','Cascais','Despiste');
---A6
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('6.3','2021-05-01 12:00:00','Concluído','Évora','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('6.3','2021-05-05 13:00:00','Concluído','Évora','Incêndio')
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('6.3','2021-05-25 12:00:00','Concluído','Évora','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('6.3','2021-05-30 13:00:00','Concluído','Évora','Incêndio');
---A7
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('7.2','2021-05-01 02:00:00','Concluído','Vila Nova de Famalicão','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('7.5','2021-05-15 16:30:00','Concluído','Fafe','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('7.5','2021-05-20 07:30:00','Concluído','Fafe','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('7.2','2021-05-20 15:00:00','Concluído','Vila Nova de Famalicão','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('7.2','2021-05-30 06:00:00','Concluído','Vila Nova de Famalicão','Colisão rodoviária');
---A8
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.4','2021-05-01 10:30:00','Concluído','Torres Vedras','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.1','2021-05-01 11:30:00','Concluído','Lisboa','Queda de Árvore');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.4','2021-05-05 23:30:00','Concluído','Torres Vedras','Colisão Rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.4','2021-05-10 07:30:00','Concluído','Torres Vedras','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.10','2021-05-10 12:00:00','Concluído','Leiria','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.1','2021-05-15 13:00:00','Concluído','Lisboa','Incêndio');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.4','2021-05-15 14:00:00','Concluído','Torres Vedras','Meteorologia adversa');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.1','2021-05-20 06:00:00','Concluído','Lisboa','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.10','2021-05-25 08:00:00','Concluído','Leiria','Colisão rodoviária');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) values('8.1','2021-05-30 09:00:00','Concluído','Lisboa','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-01 00:00:00','Concluído','Madalena','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.12','2021-05-01 06:00:00','Concluído','Ponte da Arrábida','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.7','2021-05-01 11:30:00','Concluído','Mealhada','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.2','2021-05-01 14:00:00','Concluído','Vila Franca de Xira','Meteorologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.7','2021-05-01 23:30:00','Concluído','Mealhada','Colisão Rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-05 01:30:00','Concluído','Coimbrões','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.9','2021-05-05 07:30:00','Concluído','Santa Maria da Feira','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.7','2021-05-05 12:00:00','Concluído','Mealhada','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-05 17:00:00','Concluído','Valadares','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.12','2021-05-05 18:30:00','Concluído','Ponte da Arrábida','Metereologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-10 02:00:00','Concluído','Valadares','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-10 08:00:00','Concluído','Madalena','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-10 21:00:00','Concluído','Valadares','Meteorologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-15 09:00:00','Concluído','Valadares','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-15 22:00:00','Concluído','Madalena','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-20 10:30:00','Concluído','Madalena','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.2','2021-05-20 13:00:00','Concluído','Vila Franca de Xira','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.2','2021-05-20 21:00:00','Concluído','Vila Franca de Xira','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.7','2021-05-25 12:00:00','Concluído','Mealhada','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.2','2021-05-25 14:30:00','Concluído','Vila Franca de Xira','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-25 16:30:00','Concluído','Coimbrões','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-30 15:00:00','Concluído','Madalena','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.9','2021-05-30 19:30:00','Concluído','Santa Maria da Feira','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-30 20:30:00','Concluído','Madalena','Colisão rodoviária');
+--A2															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-01 17:00:00','Concluído','Almada','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-01 18:30:00','Concluído','Castro Verde','Metereologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-01 19:30:00','Concluído','Setúbal','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-05 07:30:00','Concluído','Setúbal','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-05 12:00:00','Concluído','Setúbal','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-10 00:00:00','Concluído','Almada','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-10 12:00:00','Concluído','Castro Verde','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-20 01:30:00','Concluído','Castro Verde','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-20 06:00:00','Concluído','Almada','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-20 10:30:00','Concluído','Castro Verde','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-20 22:00:00','Concluído','Setúbal','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-25 11:30:00','Concluído','Almada','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-25 14:00:00','Concluído','Castro Verde','Meteorologia adversa');
+--A3															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.6','2021-05-05 10:30:00','Concluído','Ponte de Lima','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.2','2021-05-05 13:00:00','Concluído','Águas Santas','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.4','2021-05-20 14:30:00','Concluído','Braga','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.6','2021-05-20 15:00:00','Concluído','Ponte de Lima','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.2','2021-05-25 16:30:00','Concluído','Águas Santas','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.2','2021-05-25 18:30:00','Concluído','Águas Santas','Metereologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.4','2021-05-30 19:30:00','Concluído','Braga','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.2','2021-05-30 20:30:00','Concluído','Águas Santas','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('3.6','2021-05-30 21:00:00','Concluído','Ponte de Lima','Meteorologia adversa');
+--A4															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.5','2021-05-01 20:30:00','Concluído','Amarante','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.4','2021-05-05 19:30:00','Concluído','Penafiel','Meteorologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.4','2021-05-25 09:00:00','Concluído','Penafiel','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.5','2021-05-25 16:30:00','Concluído','Amarante','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.5','2021-05-15 17:00:00','Concluído','Amarante','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('4.4','2021-05-30 08:00:00','Concluído','Penafiel','Incêndio');
+--A5															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('5.1','2021-05-10 06:00:00','Concluído','Lisboa','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('5.1','2021-05-15 07:30:00','Concluído','Lisboa','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('5.1','2021-05-20 08:00:00','Concluído','Lisboa','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('5.2','2021-05-25 22:00:00','Concluído','Cascais','Despiste');
+--A6															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('6.3','2021-05-01 12:00:00','Concluído','Évora','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('6.3','2021-05-05 13:00:00','Concluído','Évora','Incêndio')
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('6.3','2021-05-25 12:00:00','Concluído','Évora','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('6.3','2021-05-30 13:00:00','Concluído','Évora','Incêndio');
+--A7															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('7.2','2021-05-01 02:00:00','Concluído','Vila Nova de Famalicão','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('7.5','2021-05-15 16:30:00','Concluído','Fafe','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('7.5','2021-05-20 07:30:00','Concluído','Fafe','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('7.2','2021-05-20 15:00:00','Concluído','Vila Nova de Famalicão','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('7.2','2021-05-30 06:00:00','Concluído','Vila Nova de Famalicão','Colisão rodoviária');
+--A8															   
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.4','2021-05-01 10:30:00','Concluído','Torres Vedras','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.1','2021-05-01 11:30:00','Concluído','Lisboa','Queda de Árvore');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.4','2021-05-05 23:30:00','Concluído','Torres Vedras','Colisão Rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.4','2021-05-10 07:30:00','Concluído','Torres Vedras','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.10','2021-05-10 12:00:00','Concluído','Leiria','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.1','2021-05-15 13:00:00','Concluído','Lisboa','Incêndio');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.4','2021-05-15 14:00:00','Concluído','Torres Vedras','Meteorologia adversa');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.1','2021-05-20 06:00:00','Concluído','Lisboa','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.10','2021-05-25 08:00:00','Concluído','Leiria','Colisão rodoviária');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('8.1','2021-05-30 09:00:00','Concluído','Lisboa','Despiste');
 
 
 -- insert Radar
