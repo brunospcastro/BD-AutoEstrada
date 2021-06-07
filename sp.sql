@@ -36,7 +36,7 @@ as
 
 go
 
-exec AutoEstrada.ListOcorrencias '1.10';
+exec AutoEstrada.ListOcorrencias '1.11';
 drop proc AutoEstrada.ListOcorrencias;
 
 
@@ -76,7 +76,7 @@ create proc AutoEstrada.addOcorrencia(
 @localizaçao varchar(128),
 @natureza varchar(128))
 as
-	insert AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localização,Natureza) select @troço_id,@data,@estado,@localizaçao,@natureza
+	insert AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) select @troço_id,@data,@estado,@localizaçao,@natureza
 go
 exec AutoEstrada.addOcorrencia '1.11','2021-05-15 09:00:00','Em curso','Afurada','Incêndio';
 drop proc AutoEstrada.addOcorrencia;

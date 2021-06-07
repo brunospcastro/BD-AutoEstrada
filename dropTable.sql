@@ -28,7 +28,7 @@ drop table AutoEstrada.Troço;
 GO
 drop table AutoEstrada.Estrada;
 GO
-drop schema AutoEstrada;
-GO
+--drop schema AutoEstrada;
+--GO
 --drop database BD_P2G8;
 --GO
