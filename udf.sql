@@ -1,6 +1,7 @@
 use BD_P2G8;
 go
 
+/* 
 --Dada uma estrada, retorna uma tabela com excessos de velocidade (>120km/h)
 create function AutoEstrada.MultadosTable (@estrada varchar(16)) 
 returns @table table (Estrada varchar(16), Troço varchar(128), NIF_NIPC char(9), Matricula varchar(16), [Data] Date, Velocidade int)
@@ -20,5 +21,6 @@ go
 
 select * from AutoEstrada.MultadosTable('A1');
 drop function AutoEstrada.MultadosTable;
+*/
 
 --

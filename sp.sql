@@ -1,7 +1,7 @@
 use BD_P2G8;
 go
 
-/*
+
 --listar estradas
 create proc AutoEstrada.ListEstradas
 as
@@ -10,6 +10,14 @@ go
 
 exec AutoEstrada.ListEstradas;
 drop proc AutoEstrada.ListEstradas;
+
+--listar SOS
+create proc AutoEstrada.ListSOS
+as
+	select ID,Troço_ID,Sentido,Km from AutoEstrada.TelefoneSOS order by ID;
+go
+exec AutoEstrada.ListSOS;
+drop proc AutoEstrada.ListSOS;
 
 
 
@@ -52,19 +60,26 @@ exec AutoEstrada.ListPreçario 'P1.1';
 drop proc AutoEstrada.ListPreçario;
 
 
-
---!!!!!!!!!!!!!!!!!!!dado um troço, listar proprietários e veículos em excesso de velocidade (>120km/h)    FEITO EM UDF!!!!!1
-create proc AutoEstrada.ListMultados @estrada varchar(16)
+--nº de radares dada uma estrada
+create proc AutoEstrada.NumRadares(@estrada varchar(16))
 as
-	select Estrada_ID, Troço.nome,Proprietario.ID,Proprietario.nome,Matricula,Veiculo.Marca,Veiculo.Modelo, Velocidade from Passagem_Radar
-	join Radar on Radar.ID=Radar_ID
-	join Troço on Troço.ID=Troço_ID
-	join Veiculo on Veiculo.Matricula=Veiculo_Matricula
-	join Proprietario on Proprietario.ID=Proprietario_ID
-	where Estrada_ID = @estrada and Velocidade>120;
+	select count(Estrada_ID) as cnt from Radar
+	join Troço on Troço_ID=Troço.ID
+	where Estrada_ID = @estrada
 go
-exec AutoEstrada.ListMultados 'A7';
-drop proc AutoEstrada.ListMultados;
+exec AutoEstrada.NumRadares 'A2';
+drop proc AutoEstrada.NumRadares;
+
+
+--nº de pórticos dada uma estrada
+create proc AutoEstrada.NumPorticos(@estrada varchar(16))
+as
+	select count(Estrada_ID) as cnt from Portico
+	join Troço on Troço_ID=Troço.ID
+	where Estrada_ID = @estrada
+go
+exec AutoEstrada.NumPorticos 'A2';
+drop proc AutoEstrada.NumPorticos;
 
 
 
@@ -81,6 +96,76 @@ go
 exec AutoEstrada.addOcorrencia '1.11','2021-05-15 09:00:00','Em curso','Afurada','Incêndio';
 drop proc AutoEstrada.addOcorrencia;
 
-*/
+--adicionar novo telefone SOS
+create proc AutoEstrada.addSOS(
+@id varchar(16),
+@troço_id varchar(16),
+@sentido varchar(128),
+@km int)
+as
+	insert AutoEstrada.TelefoneSOS(ID,Troço_ID,Sentido,KM) select @id,@troço_id,@sentido,@km
+go
+exec AutoEstrada.addSOS 'T1.50','1.1','Porto-Lisboa',200;
+drop proc AutoEstrada.addSOS;
 
---
+
+--adicionar nova passagem no radar
+create proc AutoEstrada.addPassagem_Radar(
+@matricula varchar(16),
+@radarID varchar(16),
+@data datetime,
+@velocidade int)
+as
+	insert AutoEstrada.Passagem_Radar(Veiculo_Matricula,Radar_ID,[Data],Velocidade) select @matricula,@radarID,@data,@velocidade
+go
+exec AutoEstrada.addPassagem_Radar '96-BO-10','R8.1','2021-05-30 20:30:00','59';
+drop proc AutoEstrada.addPassagem_Radar;
+
+
+
+--adicionar nova passagem no pórtico
+create proc AutoEstrada.addPassagem_Portico(
+@matricula varchar(16),
+@porticoID varchar(16),
+@data datetime)
+as
+	insert AutoEstrada.Passagem_Portico(Veiculo_Matricula,Portico_ID,[Data]) select @matricula,@porticoID,@data
+go
+exec AutoEstrada.addPassagem_Portico 'VL-42-05','P8.1','2021-05-30 20:30:00';
+drop proc AutoEstrada.addPassagem_Portico;
+
+
+
+--remover ocorrência
+create proc AutoEstrada.removeOcorrencia(@ocorrenciaID int)
+as
+	delete from AutoEstrada.Ocorrencia where ID = @ocorrenciaID;
+go
+exec AutoEstrada.removeOcorrencia 76;
+drop proc AutoEstrada.removeOcorrencia;
+
+
+--remeover telefoneSOS
+create proc AutoEstrada.removeSOS (@sosID varchar(16))
+as
+	delete from AutoEstrada.TelefoneSOS where ID = @sosID;
+go
+exec AutoEstrada.removeSOS 'T2.50';
+drop proc AutoEstrada.removeSOS;
+
+
+--editar telefoneSOS
+create proc AutoEstrada.updateSOS (
+@sosID varchar(16),
+@troçoID varchar(16),
+@sentido varchar(128),
+@km int)
+as
+	update AutoEstrada.TelefoneSOS
+	set Troço_ID = @troçoID, Sentido = @sentido, Km = @km 
+	where ID=@sosID	
+go
+exec AutoEstrada.updateSOS 'T1.11', '1.11', 'Porto-Lisboa', '200';
+drop proc AutoEstrada.updateSOS;
+
+
