@@ -23,7 +23,6 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -41,6 +40,7 @@ Partial Class Form3
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -51,15 +51,6 @@ Partial Class Form3
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Ver Troços"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'ListView1
-        '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(0, 41)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(372, 374)
-        Me.ListView1.TabIndex = 1
-        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'Button4
         '
@@ -202,11 +193,21 @@ Partial Class Form3
         Me.Button6.Text = "Listar Radares"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(0, 42)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(372, 379)
+        Me.ListBox1.TabIndex = 35
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(716, 416)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox5)
@@ -224,7 +225,6 @@ Partial Class Form3
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form3"
         Me.Text = "Form3"
@@ -234,7 +234,6 @@ Partial Class Form3
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -252,4 +251,5 @@ Partial Class Form3
     Friend WithEvents Label6 As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents ListBox1 As ListBox
 End Class

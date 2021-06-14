@@ -23,7 +23,6 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -41,6 +40,7 @@ Partial Class Form4
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -52,18 +52,9 @@ Partial Class Form4
         Me.Button1.Text = "Ver Ocorrências"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(3, 40)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(358, 369)
-        Me.ListView1.TabIndex = 1
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(392, 128)
+        Me.TextBox5.Location = New System.Drawing.Point(739, 166)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(48, 23)
         Me.TextBox5.TabIndex = 25
@@ -71,7 +62,7 @@ Partial Class Form4
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(392, 110)
+        Me.Label5.Location = New System.Drawing.Point(739, 148)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 15)
         Me.Label5.TabIndex = 24
@@ -79,7 +70,7 @@ Partial Class Form4
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(392, 246)
+        Me.TextBox4.Location = New System.Drawing.Point(739, 284)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(292, 23)
         Me.TextBox4.TabIndex = 23
@@ -87,7 +78,7 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(392, 228)
+        Me.Label4.Location = New System.Drawing.Point(739, 266)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 15)
         Me.Label4.TabIndex = 22
@@ -95,7 +86,7 @@ Partial Class Form4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(392, 187)
+        Me.TextBox3.Location = New System.Drawing.Point(739, 225)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(292, 23)
         Me.TextBox3.TabIndex = 21
@@ -103,7 +94,7 @@ Partial Class Form4
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(392, 169)
+        Me.Label3.Location = New System.Drawing.Point(739, 207)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(68, 15)
         Me.Label3.TabIndex = 20
@@ -111,7 +102,7 @@ Partial Class Form4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(475, 67)
+        Me.TextBox2.Location = New System.Drawing.Point(822, 105)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(209, 23)
         Me.TextBox2.TabIndex = 19
@@ -119,7 +110,7 @@ Partial Class Form4
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(475, 49)
+        Me.Label2.Location = New System.Drawing.Point(822, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 15)
         Me.Label2.TabIndex = 18
@@ -127,7 +118,7 @@ Partial Class Form4
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(392, 67)
+        Me.TextBox1.Location = New System.Drawing.Point(739, 105)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(48, 23)
         Me.TextBox1.TabIndex = 17
@@ -135,7 +126,7 @@ Partial Class Form4
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(392, 49)
+        Me.Label1.Location = New System.Drawing.Point(739, 87)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 15)
         Me.Label1.TabIndex = 16
@@ -143,7 +134,7 @@ Partial Class Form4
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(475, 128)
+        Me.TextBox6.Location = New System.Drawing.Point(813, 166)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(209, 23)
         Me.TextBox6.TabIndex = 28
@@ -151,7 +142,7 @@ Partial Class Form4
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(475, 110)
+        Me.Label6.Location = New System.Drawing.Point(822, 148)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(31, 15)
         Me.Label6.TabIndex = 27
@@ -159,7 +150,7 @@ Partial Class Form4
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(369, 307)
+        Me.Button2.Location = New System.Drawing.Point(716, 345)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(161, 41)
         Me.Button2.TabIndex = 32
@@ -168,7 +159,7 @@ Partial Class Form4
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(594, 363)
+        Me.Button4.Location = New System.Drawing.Point(941, 401)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(106, 41)
         Me.Button4.TabIndex = 31
@@ -177,7 +168,7 @@ Partial Class Form4
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(482, 363)
+        Me.Button3.Location = New System.Drawing.Point(829, 401)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 41)
         Me.Button3.TabIndex = 30
@@ -186,7 +177,7 @@ Partial Class Form4
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(369, 363)
+        Me.Button6.Location = New System.Drawing.Point(716, 401)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(106, 41)
         Me.Button6.TabIndex = 29
@@ -195,18 +186,28 @@ Partial Class Form4
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(536, 307)
+        Me.Button5.Location = New System.Drawing.Point(883, 345)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(164, 41)
         Me.Button5.TabIndex = 33
         Me.Button5.Text = "Nº de Ocorrências"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(3, 49)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(707, 409)
+        Me.ListBox1.TabIndex = 34
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 411)
+        Me.ClientSize = New System.Drawing.Size(1054, 468)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button4)
@@ -224,7 +225,6 @@ Partial Class Form4
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form4"
         Me.Text = "Form4"
@@ -234,7 +234,6 @@ Partial Class Form4
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
@@ -252,4 +251,5 @@ Partial Class Form4
     Friend WithEvents Button3 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents ListBox1 As ListBox
 End Class

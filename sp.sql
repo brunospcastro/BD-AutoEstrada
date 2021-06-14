@@ -19,12 +19,28 @@ go
 exec AutoEstrada.ListSOS;
 drop proc AutoEstrada.ListSOS;
 
+--listar troços
+create proc AutoEstrada.ListTroços1
+as
+	select ID,Estrada_ID,NumFaixas,Extensao,NumAreasServiço from AutoEstrada.Troço order by ID;
+go
+exec AutoEstrada.ListTroços1;
+drop proc AutoEstrada.ListTroço;
+
+
+--listar Ocorrencias
+create proc AutoEstrada.ListOcorrencias1
+as
+	select ID,Troço_ID,Estado,Localizaçao,[Data],Natureza from AutoEstrada.Ocorrencia order by ID;
+go
+exec AutoEstrada.ListOcorrencias1;
+drop proc AutoEstrada.ListOcorrencias1;
 
 
 --dado uma estrada, listar troços
 create proc AutoEstrada.ListTroços @estrada varchar(16)
 as
-	select Nome,Extensao,NumFaixas,NumAreasServiço from Troço 
+	select ID,Nome,Extensao,NumFaixas,NumAreasServiço from Troço 
 	where Estrada_ID=@estrada
 	order by ID;
 go
@@ -47,6 +63,15 @@ go
 exec AutoEstrada.ListOcorrencias '1.11';
 drop proc AutoEstrada.ListOcorrencias;
 
+
+--dado um troço, calcular nº de ocorrências
+create proc AutoEstrada.NumOcorrencias(@troço varchar(16))
+as
+	select count(Troço_ID) as cnt from Ocorrencia
+	where Troço_ID = @troço
+go
+exec AutoEstrada.NumOcorrencias '1.11';
+drop proc AutoEstrada.NumOcorrencias;
 
 
 --dado um pórtico, listar preçário
@@ -145,6 +170,7 @@ exec AutoEstrada.removeOcorrencia 76;
 drop proc AutoEstrada.removeOcorrencia;
 
 
+
 --remeover telefoneSOS
 create proc AutoEstrada.removeSOS (@sosID varchar(16))
 as
@@ -167,5 +193,22 @@ as
 go
 exec AutoEstrada.updateSOS 'T1.11', '1.11', 'Porto-Lisboa', '200';
 drop proc AutoEstrada.updateSOS;
+
+--editar Ocorrencia
+create proc AutoEstrada.updateOcorrencia (
+@ID varchar(16),
+@troçoID varchar(16),
+@estado varchar(128),
+@localizaçao varchar(128),
+@data datetime,
+@natureza varchar(128))
+as
+	update AutoEstrada.Ocorrencia
+	set Troço_ID = @troçoID, Estado = @estado, Localizaçao = @localizaçao, [Data] = @data, Natureza = @natureza
+	where ID=@ID	
+go
+exec AutoEstrada.updateOcorrencia 1,'1.10', 'Em curso', 'Madalena', '2021-05-1 00:00:00','Despiste';
+drop proc AutoEstrada.updateOcorrencia;
+
 
 

@@ -4,19 +4,6 @@ Public Class Form2
     Dim CMD As SqlCommand
     Dim CN As SqlConnection = New SqlConnection("data source= DESKTOP-OUSG6GB;integrated security=true;initial catalog=BD_P2G8")
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            CN.Open()
-            If CN.State = ConnectionState.Open Then
-                MsgBox("Successful connection to database " & CN.Database & " on the " & CN.DataSource &
-                " server", MsgBoxStyle.OkOnly, "Connection Test")
-            End If
-        Catch ex As Exception
-            MsgBox("FAILED TO OPEN CONNECTION TO DATABASE DUE TO THE FOLLOWING ERROR" & vbCrLf &
-            ex.Message, MsgBoxStyle.Critical, "Connection Test")
-        End Try
-        If CN.State = ConnectionState.Open Then CN.Close()
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim query As String = "select ID,Designaçao,Trajeto,Extensao,Concessionario from AutoEstrada.Estrada order by ID"
@@ -118,6 +105,40 @@ Public Class Form2
         End While
 
         CN.Close()
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim CMD As New SqlCommand
+        CMD.Connection = CN
+        CMD.CommandText = "AutoEstrada.ListTroços"
+        CMD.CommandType = CommandType.StoredProcedure
+
+        CMD.Parameters.Add(New SqlParameter("@estrada", TextBox1.Text))
+
+        CN.Open()
+        CMD.ExecuteNonQuery()
+
+        Dim reader As SqlDataReader
+        reader = CMD.ExecuteReader
+
+        ListBox1.Items.Clear()
+
+        While reader.Read
+            Dim T As New Troço
+            T.Nome = reader.Item("Nome")
+            T.NumFaixas = reader.Item("NumFaixas")
+            T.Extensao = reader.Item("Extensao")
+            T.NumAS = reader.Item("NumAreasServiço")
+            ListBox1.Items.Add(T)
+        End While
+
+        CN.Close()
+
+
+    End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

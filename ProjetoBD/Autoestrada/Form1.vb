@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form2.Show()
     End Sub
@@ -21,5 +22,20 @@
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Form7.Show()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim CN As SqlConnection = New SqlConnection("data source= DESKTOP-OUSG6GB;integrated security=true;initial catalog=BD_P2G8")
+        Try
+            CN.Open()
+            If CN.State = ConnectionState.Open Then
+                MsgBox("Successful connection to database " & CN.Database & " on the " & CN.DataSource &
+                " server", MsgBoxStyle.OkOnly, "Connection Test")
+            End If
+        Catch ex As Exception
+            MsgBox("FAILED TO OPEN CONNECTION TO DATABASE DUE TO THE FOLLOWING ERROR" & vbCrLf &
+            ex.Message, MsgBoxStyle.Critical, "Connection Test")
+        End Try
+        If CN.State = ConnectionState.Open Then CN.Close()
     End Sub
 End Class
