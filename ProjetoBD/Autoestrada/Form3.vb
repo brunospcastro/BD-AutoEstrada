@@ -3,7 +3,7 @@ Public Class Form3
     Dim CMD As SqlCommand
     Dim CN As SqlConnection = New SqlConnection("data source= DESKTOP-OUSG6GB;integrated security=true;initial catalog=BD_P2G8")
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim query As String = "select ID,Estrada_ID,NumFaixas,Extensao,NumAreasServiço from AutoEstrada.Troço order by ID;"
+        Dim query As String = "select ID,Estrada_ID,Nome,NumFaixas,Extensao,NumAreasServiço from AutoEstrada.Troço order by ID;"
         Dim CMD As New SqlCommand(query, CN)
         CN.Open()
 
@@ -16,6 +16,7 @@ Public Class Form3
             Dim T As New Troço
             T.EstradaID = reader.Item("Estrada_ID")
             T.TroçoID = reader.Item("ID")
+            T.Nome = reader.Item("Nome")
             T.NumFaixas = reader.Item("NumFaixas")
             T.Extensao = reader.Item("Extensao")
             T.NumAS = reader.Item("NumAreasServiço")
@@ -26,7 +27,4 @@ Public Class Form3
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-    End Sub
 End Class

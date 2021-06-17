@@ -1,7 +1,7 @@
 ﻿Public Class Portico
     Private _porticoID As String
     Private _troçoID As String
-    Private _km As Integer
+    Private _km As String
 
     Property PorticoID As String
         Get
@@ -21,11 +21,11 @@
         End Set
     End Property
 
-    Property KM As Integer
+    Property KM As String
         Get
             Return _km
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _km = value
         End Set
     End Property

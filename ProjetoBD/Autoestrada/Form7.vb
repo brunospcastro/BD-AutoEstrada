@@ -33,8 +33,8 @@ Public Class Form7
             CMD.CommandType = CommandType.StoredProcedure
 
             CMD.Parameters.Add(New SqlParameter("@ID", TextBox1.Text))
-            CMD.Parameters.Add(New SqlParameter("@troço_ID", TextBox2.Text))
-            CMD.Parameters.Add(New SqlParameter("@sentido", TextBox3.Text))
+            CMD.Parameters.Add(New SqlParameter("@troço_ID", ComboBox1.Text))
+            CMD.Parameters.Add(New SqlParameter("@sentido", ComboBox2.Text))
             CMD.Parameters.Add(New SqlParameter("@Km", TextBox4.Text))
 
             CN.Open()
@@ -58,8 +58,8 @@ Public Class Form7
             CMD.CommandType = CommandType.StoredProcedure
 
             CMD.Parameters.Add(New SqlParameter("@sosID", TextBox1.Text))
-            CMD.Parameters.Add(New SqlParameter("@troçoID", TextBox2.Text))
-            CMD.Parameters.Add(New SqlParameter("@sentido", TextBox3.Text))
+            CMD.Parameters.Add(New SqlParameter("@troçoID", ComboBox1.Text))
+            CMD.Parameters.Add(New SqlParameter("@sentido", ComboBox2.Text))
             CMD.Parameters.Add(New SqlParameter("@km", TextBox4.Text))
 
             CN.Open()
@@ -94,4 +94,6 @@ Public Class Form7
 
         CN.Close()
     End Sub
+
+
 End Class

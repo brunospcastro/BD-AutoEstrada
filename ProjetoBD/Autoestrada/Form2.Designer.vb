@@ -24,12 +24,12 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -49,13 +49,6 @@ Partial Class Form2
         Me.Label1.Size = New System.Drawing.Size(18, 15)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "ID"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(754, 164)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(48, 23)
-        Me.TextBox1.TabIndex = 6
         '
         'Button5
         '
@@ -102,17 +95,25 @@ Partial Class Form2
         Me.Button4.Text = "Listar Troços"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(735, 164)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(77, 23)
+        Me.ComboBox1.TabIndex = 20
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(902, 428)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form2"
@@ -123,10 +124,10 @@ Partial Class Form2
     End Sub
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

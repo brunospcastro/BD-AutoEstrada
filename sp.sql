@@ -48,6 +48,15 @@ go
 --drop proc AutoEstrada.ListRadares;
 
 
+--listar porticos
+create proc AutoEstrada.ListPorticos
+as
+	select ID,Troço_ID,Km from AutoEstrada.Portico order by ID;
+go
+--exec AutoEstrada.ListPorticos;
+--drop proc AutoEstrada.ListPorticos;
+
+
 --dado uma estrada, listar troços
 create proc AutoEstrada.ListTroços @estrada varchar(16)
 as
@@ -85,7 +94,7 @@ go
 --dado um pórtico, listar preçário
 create proc AutoEstrada.ListPreçario @portico varchar(16)
 as
-	select Troço_ID,KM,Classe1,Classe2,Classe3,Classe4 from Portico 
+	select Troço_ID,Portico.ID,KM,Classe1,Classe2,Classe3,Classe4 from Portico 
 	join Preçario on Portico_ID=Portico.ID
 	where Portico.ID =  @portico
 go
@@ -172,7 +181,7 @@ create proc AutoEstrada.removeOcorrencia(@ocorrenciaID int)
 as
 	delete from AutoEstrada.Ocorrencia where ID = @ocorrenciaID;
 go
---exec AutoEstrada.removeOcorrencia 76;
+--exec AutoEstrada.removeOcorrencia 1080;
 --drop proc AutoEstrada.removeOcorrencia;
 
 
@@ -259,3 +268,83 @@ as
 go
 --exec AutoEstrada.ListPassagemRadar 'R1.2';
 --drop proc AutoEstrada.ListPassagemRadar
+
+
+--dado um portico, listar passagens
+create proc AutoEstrada.ListPassagemPortico(@ID varchar(16))
+as
+	select Portico_ID,[Data],Proprietario_ID,Veiculo_Matricula  from AutoEstrada.Passagem_Portico
+	join Veiculo on Veiculo_Matricula=Matricula
+	where Portico_ID=@ID
+go
+--exec AutoEstrada.ListPassagemPortico 'P1.1';
+--drop proc AutoEstrada.ListPassagemPortico
+
+
+--dado um nome de troço, listar pórticos
+create proc AutoEstrada.ListPorticosT(@TroçoNome varchar(128))
+as
+	select Portico.ID,Km  from AutoEstrada.Portico
+	join Troço on Troço_ID=Troço.ID
+	where Nome=@TroçoNome
+go
+--exec AutoEstrada.ListPorticosT 'Ponte da Arrábida';
+--drop proc AutoEstrada.ListPorticosT
+
+
+--dado um nome de troço, listar Radares
+create proc AutoEstrada.ListRadaresT(@TroçoNome varchar(128))
+as
+	select Radar.ID,Sentido,Km  from AutoEstrada.Radar
+	join Troço on Troço_ID=Troço.ID
+	where Nome=@TroçoNome
+go
+--exec AutoEstrada.ListRadaresT 'Ponte da Arrábida';
+--drop proc AutoEstrada.ListRadaresT
+
+--dado um nome de troço, listarSOS
+create proc AutoEstrada.ListTelefoneT(@TroçoNome varchar(128))
+as
+	select TelefoneSOS.ID,Sentido,Km  from AutoEstrada.TelefoneSOS
+	join Troço on Troço_ID=Troço.ID
+	where Nome=@TroçoNome
+go
+--exec AutoEstrada.ListTelefoneT 'Ponte da Arrábida';
+--drop proc AutoEstrada.ListTelefoneT
+
+
+--dado um Nome de troço, listar equipamentos 
+create proc AutoEstrada.ListEquipamentos(
+@TroçoNome varchar(128),
+@equipamento varchar(128))
+
+as
+	begin
+
+		if @equipamento = 'Porticos'
+		begin
+			select Portico.ID,Km  from AutoEstrada.Portico
+			join Troço on Troço_ID=Troço.ID
+			where Nome=@TroçoNome
+		end
+
+		if @equipamento = 'Radares'
+		begin
+			select Radar.ID,Sentido,Km  from AutoEstrada.Radar
+			join Troço on Troço_ID=Troço.ID
+			where Nome=@TroçoNome
+		end
+
+		if @equipamento = 'TelefonesSOS'
+		begin
+			select TelefoneSOS.ID,Sentido,Km  from AutoEstrada.TelefoneSOS
+			join Troço on Troço_ID=Troço.ID
+			where Nome=@TroçoNome
+		end
+
+	end
+go
+--exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Porticos'
+--exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Radares'
+--exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'TelefonesSOS';
+--drop proc AutoEstrada.ListTelefoneT

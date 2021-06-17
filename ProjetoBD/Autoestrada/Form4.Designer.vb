@@ -23,13 +23,10 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -41,6 +38,9 @@ Partial Class Form4
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -51,13 +51,6 @@ Partial Class Form4
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Ver Ocorrências"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(739, 166)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(48, 23)
-        Me.TextBox5.TabIndex = 25
         '
         'Label5
         '
@@ -84,13 +77,6 @@ Partial Class Form4
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Natureza"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(739, 225)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(292, 23)
-        Me.TextBox3.TabIndex = 21
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -99,13 +85,6 @@ Partial Class Form4
         Me.Label3.Size = New System.Drawing.Size(68, 15)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Localização"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(822, 105)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(209, 23)
-        Me.TextBox2.TabIndex = 19
         '
         'Label2
         '
@@ -134,7 +113,7 @@ Partial Class Form4
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(813, 166)
+        Me.TextBox6.Location = New System.Drawing.Point(822, 166)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(209, 23)
         Me.TextBox6.TabIndex = 28
@@ -202,11 +181,37 @@ Partial Class Form4
         Me.ListBox1.Size = New System.Drawing.Size(707, 409)
         Me.ListBox1.TabIndex = 34
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(739, 225)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(292, 23)
+        Me.TextBox3.TabIndex = 21
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(739, 166)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(54, 23)
+        Me.ComboBox1.TabIndex = 35
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Em Curso", "Em Resolução", "Concluído"})
+        Me.ComboBox2.Location = New System.Drawing.Point(822, 105)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(209, 23)
+        Me.ComboBox2.TabIndex = 36
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1054, 468)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button2)
@@ -215,13 +220,11 @@ Partial Class Form4
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -234,13 +237,10 @@ Partial Class Form4
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
@@ -252,4 +252,7 @@ Partial Class Form4
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

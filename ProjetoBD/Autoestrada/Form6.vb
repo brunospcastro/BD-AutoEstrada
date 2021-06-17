@@ -30,14 +30,14 @@ Public Class Form6
         CMD.CommandText = "AutoEstrada.VelocidadeMax"
         CMD.CommandType = CommandType.StoredProcedure
 
-        CMD.Parameters.Add(New SqlParameter("@ID", TextBox1.Text))
+        CMD.Parameters.Add(New SqlParameter("@ID", ComboBox1.Text))
 
         CN.Open()
         CMD.ExecuteNonQuery()
 
         Dim reader As SqlDataReader
         reader = CMD.ExecuteReader
-        Dim str As String = "Velocidade máxima registada no " + TextBox1.Text + ": "
+        Dim str As String = "Velocidade máxima registada no " + ComboBox1.Text + ": "
 
         ListBox1.Items.Clear()
 
@@ -55,14 +55,14 @@ Public Class Form6
         CMD.CommandText = "AutoEstrada.VelocidadeMed"
         CMD.CommandType = CommandType.StoredProcedure
 
-        CMD.Parameters.Add(New SqlParameter("@ID", TextBox1.Text))
+        CMD.Parameters.Add(New SqlParameter("@ID", ComboBox1.Text))
 
         CN.Open()
         CMD.ExecuteNonQuery()
 
         Dim reader As SqlDataReader
         reader = CMD.ExecuteReader
-        Dim str As String = "Velocidade média registada no " + TextBox1.Text + ": "
+        Dim str As String = "Velocidade média registada no " + ComboBox1.Text + ": "
 
         ListBox1.Items.Clear()
 
@@ -78,7 +78,7 @@ Public Class Form6
         Dim query As String = "select count(Radar) as cnt from AutoEstrada.MultadosRadar(@radar)"
         Dim cmd As New SqlCommand(query, CN)
         cmd.Parameters.Clear()
-        cmd.Parameters.AddWithValue("@radar", TextBox1.Text)
+        cmd.Parameters.AddWithValue("@radar", ComboBox1.Text)
         CN.Open()
 
         Dim reader As SqlDataReader
@@ -86,7 +86,7 @@ Public Class Form6
 
         ListBox1.Items.Clear()
 
-        Dim str As String = "Nº de excessos de velocidade regstados no " + TextBox1.Text + ": "
+        Dim str As String = "Nº de excessos de velocidade regstados no " + ComboBox1.Text + ": "
 
         If reader.Read Then
             str &= reader.Item("cnt")
@@ -102,7 +102,7 @@ Public Class Form6
         CMD.CommandText = "AutoEstrada.ListPassagemRadar"
         CMD.CommandType = CommandType.StoredProcedure
 
-        CMD.Parameters.Add(New SqlParameter("@ID", TextBox1.Text))
+        CMD.Parameters.Add(New SqlParameter("@ID", ComboBox1.Text))
 
         CN.Open()
         CMD.ExecuteNonQuery()
@@ -122,5 +122,29 @@ Public Class Form6
         End While
 
         CN.Close()
+    End Sub
+
+    Private Sub FillComboBox()
+        Dim query As String = "select * from AutoEstrada.getRadares"
+        Dim CMD As New SqlCommand(query, CN)
+
+        CN.Open()
+
+        Dim reader As SqlDataReader
+        reader = CMD.ExecuteReader
+
+        Dim str As String
+
+        While reader.Read
+            str = reader.Item("ID")
+            ComboBox1.Items.Add(str)
+        End While
+
+        CN.Close()
+
+    End Sub
+
+    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FillComboBox()
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-'Editar+FixAdicionar
+
 Public Class Form4
     Dim CMD As SqlCommand
     Dim CN As SqlConnection = New SqlConnection("data source= DESKTOP-OUSG6GB;integrated security=true;initial catalog=BD_P2G8")
@@ -34,7 +34,7 @@ Public Class Form4
         CMD.CommandText = "AutoEstrada.ListOcorrencias"
         CMD.CommandType = CommandType.StoredProcedure
 
-        CMD.Parameters.Add(New SqlParameter("@troço", TextBox5.Text))
+        CMD.Parameters.Add(New SqlParameter("@troço", ComboBox1.Text))
 
         CN.Open()
         CMD.ExecuteNonQuery()
@@ -64,9 +64,9 @@ Public Class Form4
             CMD.CommandText = "AutoEstrada.addOcorrencia"
             CMD.CommandType = CommandType.StoredProcedure
 
-            CMD.Parameters.Add(New SqlParameter("@troço_ID", TextBox5.Text))
+            CMD.Parameters.Add(New SqlParameter("@troço_ID", ComboBox1.Text))
             CMD.Parameters.Add(New SqlParameter("@data", TextBox6.Text))
-            CMD.Parameters.Add(New SqlParameter("@estado", TextBox2.Text))
+            CMD.Parameters.Add(New SqlParameter("@estado", ComboBox2.Text))
             CMD.Parameters.Add(New SqlParameter("@localizaçao", TextBox3.Text))
             CMD.Parameters.Add(New SqlParameter("@natureza", TextBox4.Text))
 
@@ -95,7 +95,7 @@ Public Class Form4
             CN.Open()
             CMD.ExecuteNonQuery()
 
-            MsgBox("Removido com sucesso")
+            MsgBox("Estado da Ocorrência passado a concluído")
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -110,14 +110,14 @@ Public Class Form4
         CMD.CommandText = "AutoEstrada.NumOcorrencias"
         CMD.CommandType = CommandType.StoredProcedure
 
-        CMD.Parameters.Add(New SqlParameter("@troço", TextBox5.Text))
+        CMD.Parameters.Add(New SqlParameter("@troço", ComboBox1.Text))
 
         CN.Open()
         CMD.ExecuteNonQuery()
 
         Dim reader As SqlDataReader
         reader = CMD.ExecuteReader
-        Dim str As String = "Nº de Ocorrências no troço " + TextBox5.Text + ":  "
+        Dim str As String = "Nº de Ocorrências no troço " + ComboBox1.Text + ":  "
 
         ListBox1.Items.Clear()
 
@@ -137,8 +137,8 @@ Public Class Form4
             CMD.CommandType = CommandType.StoredProcedure
 
             CMD.Parameters.Add(New SqlParameter("@ID", TextBox1.Text))
-            CMD.Parameters.Add(New SqlParameter("@troçoID", TextBox5.Text))
-            CMD.Parameters.Add(New SqlParameter("@estado", TextBox2.Text))
+            CMD.Parameters.Add(New SqlParameter("@troçoID", ComboBox1.Text))
+            CMD.Parameters.Add(New SqlParameter("@estado", ComboBox2.Text))
             CMD.Parameters.Add(New SqlParameter("@localizaçao", TextBox3.Text))
             CMD.Parameters.Add(New SqlParameter("@data", TextBox6.Text))
             CMD.Parameters.Add(New SqlParameter("@natureza", TextBox4.Text))
@@ -153,5 +153,29 @@ Public Class Form4
         End Try
 
         CN.Close()
+    End Sub
+
+    Private Sub FillComboBox()
+        Dim query As String = "select * from AutoEstrada.getTroços"
+        Dim CMD As New SqlCommand(query, CN)
+
+        CN.Open()
+
+        Dim reader As SqlDataReader
+        reader = CMD.ExecuteReader
+
+        Dim str As String
+
+        While reader.Read
+            str = reader.Item("ID")
+            ComboBox1.Items.Add(str)
+        End While
+
+        CN.Close()
+
+    End Sub
+
+    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FillComboBox()
     End Sub
 End Class

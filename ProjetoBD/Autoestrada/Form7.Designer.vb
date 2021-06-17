@@ -29,12 +29,12 @@ Partial Class Form7
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -99,13 +99,6 @@ Partial Class Form7
         Me.TextBox1.Size = New System.Drawing.Size(100, 23)
         Me.TextBox1.TabIndex = 13
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(519, 160)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 15
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -114,13 +107,6 @@ Partial Class Form7
         Me.Label2.Size = New System.Drawing.Size(47, 15)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "TroçoID"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(457, 227)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(256, 23)
-        Me.TextBox3.TabIndex = 17
         '
         'Label3
         '
@@ -147,16 +133,34 @@ Partial Class Form7
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Km"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"1.1", "1.2", "1.3", "1.4", "1.5", "1.6´", "1.7", "1.8", "1.9", "1.10", "1.11", "1.12", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6´", "2.7", "2.8", "2.9", "2.10", "2.11", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6´", "3.7", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "5.1", "5.2", "6.1", "6.2", "6.3", "6.4", "6.5", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6´", "8.7", "8.8", "8.9", "8.10"})
+        Me.ComboBox1.Location = New System.Drawing.Point(519, 169)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(100, 23)
+        Me.ComboBox1.TabIndex = 20
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Lisboa - Porto", "Porto - Lisboa", "Lisboa - Algarve", "Algarve - Lisboa", "Porto - Valença", "Valença - Porto", "Matosinhos - Bragança", "Bragança - Matosinhos", "Lisboa - Cascais", "Cascais - Lisboa", "Marateca - Caia (ES)", "Caia (ES) - Marateca", "Póvoa de Varzim - Vila Pouca de Aguiar", "Vila Pouca de Aguiar - Póvoa de Varzim", "Lisboa - Leiria", "Leiria - Lisboa"})
+        Me.ComboBox2.Location = New System.Drawing.Point(448, 234)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(266, 23)
+        Me.ComboBox2.TabIndex = 21
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 450)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -179,10 +183,10 @@ Partial Class Form7
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class
