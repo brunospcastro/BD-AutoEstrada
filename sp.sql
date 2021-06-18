@@ -30,6 +30,15 @@ go
 --drop proc AutoEstrada.ListTroço;
 
 
+--listar troços
+create proc AutoEstrada.ListNomesTroço
+as
+	select Nome from AutoEstrada.Troço order by ID;
+go
+--exec AutoEstrada.ListNomesTroço;
+--drop proc AutoEstrada.ListNomesTroço;
+
+
 --listar Ocorrencias
 create proc AutoEstrada.ListOcorrencias1
 as
@@ -321,7 +330,7 @@ create proc AutoEstrada.ListEquipamentos(
 as
 	begin
 
-		if @equipamento = 'Porticos'
+		if @equipamento = 'Pórticos'
 		begin
 			select Portico.ID,Km  from AutoEstrada.Portico
 			join Troço on Troço_ID=Troço.ID
@@ -335,7 +344,7 @@ as
 			where Nome=@TroçoNome
 		end
 
-		if @equipamento = 'TelefonesSOS'
+		if @equipamento = 'Telefones SOS'
 		begin
 			select TelefoneSOS.ID,Sentido,Km  from AutoEstrada.TelefoneSOS
 			join Troço on Troço_ID=Troço.ID
@@ -344,7 +353,7 @@ as
 
 	end
 go
---exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Porticos'
---exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Radares'
+--exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Porticos';
+--exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Radares';
 --exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'TelefonesSOS';
---drop proc AutoEstrada.ListTelefoneT
+--drop proc AutoEstrada.ListEquipamentos

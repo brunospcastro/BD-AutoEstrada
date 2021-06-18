@@ -31,6 +31,6 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _porticoID & vbTab & _troçoID & vbTab & _km + "km"
+        Return _porticoID & vbTab & _troçoID & vbTab & _km + " km"
     End Function
 End Class

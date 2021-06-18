@@ -34,3 +34,13 @@ as
 go
 --select * from AutoEstrada.getPorticos;
 --drop view AutoEstrada.getPorticos;
+
+
+
+--listar Pórticos
+create view AutoEstrada.getTroçoNomes
+as
+	select Nome from AutoEstrada.Troço order by ID; 
+go
+--select * from AutoEstrada.getTroçoNomes;
+--drop view AutoEstrada.getTroçoNomes;

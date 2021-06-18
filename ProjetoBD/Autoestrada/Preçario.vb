@@ -53,6 +53,6 @@
 
 
     Overrides Function ToString() As String
-        Return "classe1: " + _classe1 + "€" & vbTab & "classe2: " + _classe2 + "€" & vbTab & "classe3: " + _classe3 + "€" & vbTab & "classe4: " + _classe4 + "€"
+        Return "Classe 1: " + _classe1 + "€" & vbTab & "Classe 2: " + _classe2 + "€" & vbTab & "Classe 3: " + _classe3 + "€" & vbTab & "Classe 4: " + _classe4 + "€"
     End Function
 End Class

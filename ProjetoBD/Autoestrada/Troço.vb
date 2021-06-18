@@ -3,7 +3,7 @@
     Private _nome As String
     Private _estradaID As String
     Private _numFaixas As Integer
-    Private _extensao As Integer
+    Private _extensao As String
     Private _numAS As Integer
 
     Property TroçoID As String
@@ -43,11 +43,11 @@
         End Set
     End Property
 
-    Property Extensao As Integer
+    Property Extensao As String
         Get
             Return _extensao
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _extensao = value
         End Set
     End Property
@@ -62,7 +62,7 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _troçoID & vbTab & _nome & vbTab & _estradaID & vbTab & _numFaixas & vbTab & _extensao & vbTab & _numAS
+        Return _estradaID & vbTab & _troçoID & vbTab & _extensao + " km" & vbTab & _nome
     End Function
 
 End Class

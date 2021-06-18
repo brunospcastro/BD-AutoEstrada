@@ -23,7 +23,6 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -34,24 +33,15 @@ Partial Class Form5
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(641, 102)
+        Me.Label1.Location = New System.Drawing.Point(643, 147)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 15)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "ID"
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(578, 236)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(148, 41)
-        Me.Button5.TabIndex = 45
-        Me.Button5.Text = "Nº de passagens"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(578, 297)
+        Me.Button2.Location = New System.Drawing.Point(580, 284)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(148, 41)
         Me.Button2.TabIndex = 44
@@ -70,14 +60,14 @@ Partial Class Form5
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(608, 120)
+        Me.ComboBox1.Location = New System.Drawing.Point(610, 165)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(85, 23)
         Me.ComboBox1.TabIndex = 52
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(578, 176)
+        Me.Button3.Location = New System.Drawing.Point(580, 221)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(148, 41)
         Me.Button3.TabIndex = 53
@@ -103,7 +93,6 @@ Partial Class Form5
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button2)
         Me.Name = "Form5"
         Me.Text = "Form5"
@@ -112,7 +101,6 @@ Partial Class Form5
 
     End Sub
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox

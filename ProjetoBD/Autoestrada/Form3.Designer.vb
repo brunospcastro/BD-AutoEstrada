@@ -43,7 +43,7 @@ Partial Class Form3
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(864, 130)
+        Me.Label2.Location = New System.Drawing.Point(580, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 15)
         Me.Label2.TabIndex = 15
@@ -51,7 +51,7 @@ Partial Class Form3
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(802, 253)
+        Me.Button6.Location = New System.Drawing.Point(518, 244)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(161, 41)
         Me.Button6.TabIndex = 34
@@ -64,14 +64,14 @@ Partial Class Form3
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(0, 42)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(664, 379)
+        Me.ListBox1.Size = New System.Drawing.Size(422, 379)
         Me.ListBox1.TabIndex = 35
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Pórticos", "Radares", "Telefones SOS"})
-        Me.ComboBox1.Location = New System.Drawing.Point(820, 206)
+        Me.ComboBox1.Location = New System.Drawing.Point(536, 197)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(128, 23)
         Me.ComboBox1.TabIndex = 36
@@ -79,7 +79,7 @@ Partial Class Form3
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(850, 188)
+        Me.Label7.Location = New System.Drawing.Point(559, 179)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 15)
         Me.Label7.TabIndex = 37
@@ -88,16 +88,16 @@ Partial Class Form3
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(689, 148)
+        Me.ComboBox2.Location = New System.Drawing.Point(442, 139)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(387, 23)
+        Me.ComboBox2.Size = New System.Drawing.Size(327, 23)
         Me.ComboBox2.TabIndex = 38
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1084, 416)
+        Me.ClientSize = New System.Drawing.Size(806, 416)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)

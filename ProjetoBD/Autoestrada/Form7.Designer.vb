@@ -48,7 +48,7 @@ Partial Class Form7
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(659, 377)
+        Me.Button4.Location = New System.Drawing.Point(743, 379)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(106, 41)
         Me.Button4.TabIndex = 10
@@ -57,7 +57,7 @@ Partial Class Form7
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(532, 377)
+        Me.Button3.Location = New System.Drawing.Point(616, 379)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 41)
         Me.Button3.TabIndex = 9
@@ -66,7 +66,7 @@ Partial Class Form7
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(407, 377)
+        Me.Button2.Location = New System.Drawing.Point(491, 379)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(106, 41)
         Me.Button2.TabIndex = 8
@@ -80,13 +80,13 @@ Partial Class Form7
         Me.ListBox1.Location = New System.Drawing.Point(2, 47)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(385, 394)
+        Me.ListBox1.Size = New System.Drawing.Size(483, 394)
         Me.ListBox1.TabIndex = 11
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(560, 76)
+        Me.Label1.Location = New System.Drawing.Point(644, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 15)
         Me.Label1.TabIndex = 12
@@ -94,7 +94,7 @@ Partial Class Form7
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(519, 94)
+        Me.TextBox1.Location = New System.Drawing.Point(603, 96)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 23)
         Me.TextBox1.TabIndex = 13
@@ -102,7 +102,7 @@ Partial Class Form7
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(547, 142)
+        Me.Label2.Location = New System.Drawing.Point(631, 144)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 15)
         Me.Label2.TabIndex = 14
@@ -111,7 +111,7 @@ Partial Class Form7
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(547, 209)
+        Me.Label3.Location = New System.Drawing.Point(631, 211)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 15)
         Me.Label3.TabIndex = 16
@@ -119,7 +119,7 @@ Partial Class Form7
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(519, 297)
+        Me.TextBox4.Location = New System.Drawing.Point(603, 299)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 23)
         Me.TextBox4.TabIndex = 19
@@ -127,7 +127,7 @@ Partial Class Form7
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(553, 279)
+        Me.Label4.Location = New System.Drawing.Point(637, 281)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(25, 15)
         Me.Label4.TabIndex = 18
@@ -137,7 +137,7 @@ Partial Class Form7
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"1.1", "1.2", "1.3", "1.4", "1.5", "1.6´", "1.7", "1.8", "1.9", "1.10", "1.11", "1.12", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6´", "2.7", "2.8", "2.9", "2.10", "2.11", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6´", "3.7", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "5.1", "5.2", "6.1", "6.2", "6.3", "6.4", "6.5", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6´", "8.7", "8.8", "8.9", "8.10"})
-        Me.ComboBox1.Location = New System.Drawing.Point(519, 169)
+        Me.ComboBox1.Location = New System.Drawing.Point(603, 171)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(100, 23)
         Me.ComboBox1.TabIndex = 20
@@ -146,7 +146,7 @@ Partial Class Form7
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Lisboa - Porto", "Porto - Lisboa", "Lisboa - Algarve", "Algarve - Lisboa", "Porto - Valença", "Valença - Porto", "Matosinhos - Bragança", "Bragança - Matosinhos", "Lisboa - Cascais", "Cascais - Lisboa", "Marateca - Caia (ES)", "Caia (ES) - Marateca", "Póvoa de Varzim - Vila Pouca de Aguiar", "Vila Pouca de Aguiar - Póvoa de Varzim", "Lisboa - Leiria", "Leiria - Lisboa"})
-        Me.ComboBox2.Location = New System.Drawing.Point(448, 234)
+        Me.ComboBox2.Location = New System.Drawing.Point(532, 236)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(266, 23)
         Me.ComboBox2.TabIndex = 21
@@ -155,7 +155,7 @@ Partial Class Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 450)
+        Me.ClientSize = New System.Drawing.Size(857, 450)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox4)

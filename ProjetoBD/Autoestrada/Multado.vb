@@ -83,7 +83,7 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _Data & vbTab & _proprietario & vbTab & _marca + " " + _modelo & vbTab & _matricula & vbTab & _Velocidade + "km/h"
+        Return _Data & vbTab & _proprietario + "   " & vbTab & _marca + " " + _modelo & vbTab & _matricula + "        " & vbTab & _Velocidade + "km/h"
     End Function
 
 End Class

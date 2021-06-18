@@ -1,24 +1,14 @@
-﻿Public Class SOS
-    Private _sosID As String
-    Private _troço As String
+﻿Public Class Equipamento
+    Private _equipamentoID As String
     Private _sentido As String
     Private _km As String
 
-    Property sosID As String
+    Property EquipamentoID As String
         Get
-            Return _sosID
+            Return _equipamentoID
         End Get
         Set(value As String)
-            _sosID = value
-        End Set
-    End Property
-
-    Property Troço As String
-        Get
-            Return _troço
-        End Get
-        Set(value As String)
-            _troço = value
+            _equipamentoID = value
         End Set
     End Property
 
@@ -41,6 +31,11 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _sosID & vbTab & _troço & vbTab & _km + " km" & vbTab & _sentido
+        If _sentido = Nothing Then
+            Return _equipamentoID & vbTab & _km + "km"
+
+        Else
+            Return _equipamentoID & vbTab & _sentido & vbTab & _km + "km"
+        End If
     End Function
 End Class

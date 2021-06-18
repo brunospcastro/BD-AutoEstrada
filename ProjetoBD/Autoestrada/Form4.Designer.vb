@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form4
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form4
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -55,7 +55,7 @@ Partial Class Form4
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(739, 148)
+        Me.Label5.Location = New System.Drawing.Point(793, 144)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 15)
         Me.Label5.TabIndex = 24
@@ -63,7 +63,7 @@ Partial Class Form4
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(739, 284)
+        Me.TextBox4.Location = New System.Drawing.Point(793, 280)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(292, 23)
         Me.TextBox4.TabIndex = 23
@@ -71,7 +71,7 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(739, 266)
+        Me.Label4.Location = New System.Drawing.Point(793, 262)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 15)
         Me.Label4.TabIndex = 22
@@ -80,7 +80,7 @@ Partial Class Form4
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(739, 207)
+        Me.Label3.Location = New System.Drawing.Point(793, 203)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(68, 15)
         Me.Label3.TabIndex = 20
@@ -89,7 +89,7 @@ Partial Class Form4
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(822, 87)
+        Me.Label2.Location = New System.Drawing.Point(876, 83)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 15)
         Me.Label2.TabIndex = 18
@@ -97,7 +97,7 @@ Partial Class Form4
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(739, 105)
+        Me.TextBox1.Location = New System.Drawing.Point(793, 101)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(48, 23)
         Me.TextBox1.TabIndex = 17
@@ -105,7 +105,7 @@ Partial Class Form4
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(739, 87)
+        Me.Label1.Location = New System.Drawing.Point(793, 83)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 15)
         Me.Label1.TabIndex = 16
@@ -113,15 +113,18 @@ Partial Class Form4
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(822, 166)
+        Me.TextBox6.AccessibleDescription = ""
+        Me.TextBox6.AccessibleName = ""
+        Me.TextBox6.Location = New System.Drawing.Point(876, 162)
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.PlaceholderText = "AAAA-MM-DD HH:MM:SS"
         Me.TextBox6.Size = New System.Drawing.Size(209, 23)
         Me.TextBox6.TabIndex = 28
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(822, 148)
+        Me.Label6.Location = New System.Drawing.Point(876, 144)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(31, 15)
         Me.Label6.TabIndex = 27
@@ -129,7 +132,7 @@ Partial Class Form4
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(716, 345)
+        Me.Button2.Location = New System.Drawing.Point(770, 341)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(161, 41)
         Me.Button2.TabIndex = 32
@@ -138,7 +141,7 @@ Partial Class Form4
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(941, 401)
+        Me.Button4.Location = New System.Drawing.Point(995, 397)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(106, 41)
         Me.Button4.TabIndex = 31
@@ -147,7 +150,7 @@ Partial Class Form4
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(829, 401)
+        Me.Button3.Location = New System.Drawing.Point(883, 397)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 41)
         Me.Button3.TabIndex = 30
@@ -156,7 +159,7 @@ Partial Class Form4
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(716, 401)
+        Me.Button6.Location = New System.Drawing.Point(770, 397)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(106, 41)
         Me.Button6.TabIndex = 29
@@ -165,7 +168,7 @@ Partial Class Form4
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(883, 345)
+        Me.Button5.Location = New System.Drawing.Point(937, 341)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(164, 41)
         Me.Button5.TabIndex = 33
@@ -174,16 +177,17 @@ Partial Class Form4
         '
         'ListBox1
         '
+        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(3, 49)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(707, 409)
+        Me.ListBox1.Size = New System.Drawing.Size(761, 394)
         Me.ListBox1.TabIndex = 34
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(739, 225)
+        Me.TextBox3.Location = New System.Drawing.Point(793, 221)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(292, 23)
         Me.TextBox3.TabIndex = 21
@@ -191,7 +195,7 @@ Partial Class Form4
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(739, 166)
+        Me.ComboBox1.Location = New System.Drawing.Point(793, 162)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(54, 23)
         Me.ComboBox1.TabIndex = 35
@@ -200,7 +204,7 @@ Partial Class Form4
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Em Curso", "Em Resolução", "Concluído"})
-        Me.ComboBox2.Location = New System.Drawing.Point(822, 105)
+        Me.ComboBox2.Location = New System.Drawing.Point(876, 101)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(209, 23)
         Me.ComboBox2.TabIndex = 36
@@ -209,7 +213,7 @@ Partial Class Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1054, 468)
+        Me.ClientSize = New System.Drawing.Size(1113, 468)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ListBox1)
