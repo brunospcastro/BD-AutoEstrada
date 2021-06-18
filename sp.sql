@@ -298,7 +298,7 @@ as
 	where Nome=@TroçoNome
 go
 --exec AutoEstrada.ListPorticosT 'Ponte da Arrábida';
---drop proc AutoEstrada.ListPorticosT
+--drop proc AutoEstrada.ListPorticosT;
 
 
 --dado um nome de troço, listar Radares
@@ -309,7 +309,7 @@ as
 	where Nome=@TroçoNome
 go
 --exec AutoEstrada.ListRadaresT 'Ponte da Arrábida';
---drop proc AutoEstrada.ListRadaresT
+--drop proc AutoEstrada.ListRadaresT;
 
 --dado um nome de troço, listarSOS
 create proc AutoEstrada.ListTelefoneT(@TroçoNome varchar(128))
@@ -319,7 +319,31 @@ as
 	where Nome=@TroçoNome
 go
 --exec AutoEstrada.ListTelefoneT 'Ponte da Arrábida';
---drop proc AutoEstrada.ListTelefoneT
+--drop proc AutoEstrada.ListTelefoneT;
+
+
+--eliminar troço, eliminar radares, troços, telefonesSOS,... desse troço e atualizar troço_ID de ocorrências (=NULL)
+create proc AutoEstrada.RemoveTroço(@Troço varchar(16))
+as
+begin
+declare @PorticoID varchar(16)
+declare @RadarID varchar(16)
+	begin transaction;
+		select @PorticoID = ID from AutoEstrada.Portico where Troço_ID=@Troço
+		select @RadarID = ID from AutoEstrada.Radar where Troço_ID=@Troço
+		update AutoEstrada.Ocorrencia set Troço_ID = Null  where Troço_ID=@Troço
+		delete from AutoEstrada.Troço where ID=@Troço
+		delete from AutoEstrada.Preçario where Portico_ID=@PorticoID
+		delete from AutoEstrada.Portico where Troço_ID=@Troço
+		delete from AutoEstrada.Radar where Troço_ID=@Troço
+		delete from AutoEstrada.TelefoneSOS where Troço_ID=@Troço
+		delete from AutoEstrada.Passagem_Radar where Radar_ID=@RadarID
+		delete from AutoEstrada.Passagem_Portico where Portico_ID=@PorticoID
+	commit;
+end
+go
+exec AutoEstrada.RemoveTroço '1.12';
+drop proc AutoEstrada.RemoveTroço;
 
 
 --dado um Nome de troço, listar equipamentos 
@@ -356,4 +380,4 @@ go
 --exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Porticos';
 --exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'Radares';
 --exec AutoEstrada.ListEquipamentos 'Ponte da Arrábida', 'TelefonesSOS';
---drop proc AutoEstrada.ListEquipamentos
+--drop proc AutoEstrada.ListEquipamentos;

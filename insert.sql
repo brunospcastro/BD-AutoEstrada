@@ -88,7 +88,7 @@ insert into AutoEstrada.Troço(ID,Nome,Estrada_ID,NumFaixas,Extensao,NumAreasServ
 
 --insert Ocorrencia
 --A1
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-01 00:00:00','Concluído','Madalena','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.10','2021-05-01 00:30:00','Concluído','Madalena','Despiste');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.12','2021-05-01 06:00:00','Concluído','Ponte da Arrábida','Colisão rodoviária');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.7','2021-05-01 11:30:00','Concluído','Mealhada','Queda de Árvore');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('1.2','2021-05-01 14:00:00','Concluído','Vila Franca de Xira','Meteorologia adversa');
@@ -118,7 +118,7 @@ insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) 
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-01 19:30:00','Concluído','Setúbal','Despiste');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-05 07:30:00','Concluído','Setúbal','Despiste');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.5','2021-05-05 12:00:00','Concluído','Setúbal','Despiste');
-insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-10 00:00:00','Concluído','Almada','Despiste');
+insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-10 00:30:00','Concluído','Almada','Despiste');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-10 12:00:00','Concluído','Castro Verde','Despiste');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.11','2021-05-20 01:30:00','Concluído','Castro Verde','Queda de Árvore');
 insert into AutoEstrada.Ocorrencia(Troço_ID,[Data],Estado,Localizaçao,Natureza) values('2.2','2021-05-20 06:00:00','Concluído','Almada','Colisão rodoviária');

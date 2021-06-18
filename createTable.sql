@@ -32,7 +32,7 @@ GO
 
 create table AutoEstrada.Ocorrencia(
 	ID			int				not null	identity(1,1),
-	Troço_ID	varchar(16)		not null,
+	Troço_ID	varchar(16),
 	Estado		varchar(128)	not null	check(Estado='Em Curso' or Estado='Em Resolução' or Estado='Concluído'),
 	Localizaçao	varchar(128)	not null,
 	[Data]		datetime		not null,

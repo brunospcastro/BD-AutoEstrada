@@ -16,7 +16,11 @@ Public Class Form4
         While reader.Read
             Dim O As New Ocorrencia
             O.OcorrenciaID = reader.Item("ID")
-            O.TroçoID = reader.Item("Troço_ID")
+            If IsDBNull(reader.Item("Troço_ID")) Then
+                O.TroçoID = "Null"
+            Else
+                O.TroçoID = reader.Item("Troço_ID")
+            End If
             O.Estado = reader.Item("Estado")
             O.Localizaçao = reader.Item("Localizaçao")
             O.Data = reader.Item("Data")

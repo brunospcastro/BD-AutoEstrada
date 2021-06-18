@@ -40,7 +40,7 @@ go
 --listar Pórticos
 create view AutoEstrada.getTroçoNomes
 as
-	select Nome from AutoEstrada.Troço order by ID; 
+	select Nome from AutoEstrada.Troço; 
 go
 --select * from AutoEstrada.getTroçoNomes;
 --drop view AutoEstrada.getTroçoNomes;
