@@ -95,6 +95,7 @@ Partial Class Form5
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "Form5"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form5"
         Me.ResumeLayout(False)
         Me.PerformLayout()

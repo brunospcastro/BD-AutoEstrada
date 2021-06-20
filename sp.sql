@@ -246,18 +246,7 @@ go
 --drop proc AutoEstrada.VelocidadeMax
 
 
---dado um radar devolver velocidade máxima registada
-create proc AutoEstrada.VelocidadeMed(@ID varchar(16))
-as
-	select avg(velocidade) as velocidadeMed from AutoEstrada.Radar
-	join AutoEstrada.Passagem_Radar on Radar_ID = Radar.ID
-	where Radar.ID=@ID
-go
---exec AutoEstrada.VelocidadeMed 'R1.1';
---drop proc AutoEstrada.VelocidadeMed
-
-
---dado um radar devolver nº de excessos de velocidade
+--dado um radar devolver velocidade média registada
 create proc AutoEstrada.VelocidadeMed(@ID varchar(16))
 as
 	select avg(velocidade) as velocidadeMed from AutoEstrada.Radar
@@ -332,17 +321,18 @@ declare @RadarID varchar(16)
 		select @PorticoID = ID from AutoEstrada.Portico where Troço_ID=@Troço
 		select @RadarID = ID from AutoEstrada.Radar where Troço_ID=@Troço
 		update AutoEstrada.Ocorrencia set Troço_ID = Null  where Troço_ID=@Troço
-		delete from AutoEstrada.Troço where ID=@Troço
 		delete from AutoEstrada.Preçario where Portico_ID=@PorticoID
+		delete from AutoEstrada.Passagem_Radar where Radar_ID=@RadarID
+		delete from AutoEstrada.Passagem_Portico where Portico_ID=@PorticoID
 		delete from AutoEstrada.Portico where Troço_ID=@Troço
 		delete from AutoEstrada.Radar where Troço_ID=@Troço
 		delete from AutoEstrada.TelefoneSOS where Troço_ID=@Troço
-		delete from AutoEstrada.Passagem_Radar where Radar_ID=@RadarID
-		delete from AutoEstrada.Passagem_Portico where Portico_ID=@PorticoID
+		delete from AutoEstrada.Troço where ID=@Troço
+		
 	commit;
 end
 go
-exec AutoEstrada.RemoveTroço '1.12';
+exec AutoEstrada.RemoveTroço '1.2';
 drop proc AutoEstrada.RemoveTroço;
 
 

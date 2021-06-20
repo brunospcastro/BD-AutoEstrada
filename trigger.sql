@@ -1,7 +1,7 @@
 use BD_P2G8;
 go
 
-/* */
+
 create trigger AutoEstrada.deleteOcorrencia on AutoEstrada.Ocorrencia
 instead of delete
 as

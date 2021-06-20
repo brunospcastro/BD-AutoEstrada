@@ -95,5 +95,27 @@ Public Class Form7
         CN.Close()
     End Sub
 
+    Private Sub FillComboBox()
+        Dim query As String = "select * from AutoEstrada.getTroços"
+        Dim CMD As New SqlCommand(query, CN)
 
+        CN.Open()
+
+        Dim reader As SqlDataReader
+        reader = CMD.ExecuteReader
+
+        Dim str As String
+
+        While reader.Read
+            str = reader.Item("ID")
+            ComboBox1.Items.Add(str)
+        End While
+
+        CN.Close()
+
+    End Sub
+
+    Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FillComboBox()
+    End Sub
 End Class

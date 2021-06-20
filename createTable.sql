@@ -2,8 +2,8 @@
 --GO
 use BD_P2G8;
 GO
-create schema AutoEstrada;
-GO
+-- create schema AutoEstrada;
+-- GO
 
 
 create table AutoEstrada.Estrada(

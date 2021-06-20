@@ -41,6 +41,6 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _radarID & vbTab & _data & vbTab & _matricula & vbTab & _velocidade + "km/h"
+        Return _radarID & vbTab & _data & vbTab & _matricula + "     " & vbTab & _velocidade + "km/h"
     End Function
 End Class

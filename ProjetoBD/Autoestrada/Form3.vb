@@ -88,7 +88,49 @@ Public Class Form3
 
     End Sub
 
+    Private Sub FillComboBox2()
+        Dim query As String = "select * from AutoEstrada.getTroços"
+        Dim CMD As New SqlCommand(query, CN)
+
+        CN.Open()
+
+        Dim reader As SqlDataReader
+        reader = CMD.ExecuteReader
+
+        Dim str As String
+
+        While reader.Read
+            str = reader.Item("ID")
+            ComboBox3.Items.Add(str)
+        End While
+
+        CN.Close()
+
+    End Sub
+
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillComboBox()
+        FillComboBox2()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+            Dim CMD As New SqlCommand
+            CMD.Connection = CN
+            CMD.CommandText = "AutoEstrada.RemoveTroço"
+            CMD.CommandType = CommandType.StoredProcedure
+
+            CMD.Parameters.Add(New SqlParameter("@Troço", ComboBox3.Text))
+
+            CN.Open()
+            CMD.ExecuteNonQuery()
+
+            MsgBox("Troço Removido")
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        CN.Close()
     End Sub
 End Class

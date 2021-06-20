@@ -61,7 +61,13 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _ocorrenciaID & vbTab & _troçoID & vbTab & _data + "   " & vbTab & _estado & vbTab & vbTab & _natureza + "    " & vbTab & vbTab & _localizaçao
+        If _estado = "Em Resolução" Then
+            Return _ocorrenciaID & vbTab & _troçoID & vbTab & _data + "   " & vbTab & _estado & vbTab & _natureza + "     " & vbTab & vbTab & _localizaçao
+        Else
+
+            Return _ocorrenciaID & vbTab & _troçoID & vbTab & _data + "   " & vbTab & _estado & vbTab & vbTab & _natureza + "     " & vbTab & vbTab & _localizaçao
+        End If
+
     End Function
 
 End Class
